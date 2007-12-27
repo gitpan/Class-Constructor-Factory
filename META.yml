@@ -1,0 +1,25 @@
+---
+name: Class-Constructor-Factory
+version: 0.001
+author:
+  - 'Adriano R. Ferreira <ferreira@cpan.org>'
+abstract: Automated constructor generation
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Exporter::Lite: 0
+  SUPER: 0
+  Scalar::Defer: 0.12
+  strict: 0
+  warnings: 0
+build_requires:
+  Test::More: 0
+provides:
+  Class::Constructor::Factory:
+    file: lib/Class/Constructor/Factory.pm
+    version: 0.001
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
