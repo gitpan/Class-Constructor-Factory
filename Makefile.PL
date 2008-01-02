@@ -12,7 +12,7 @@ WriteMakefile
                            'strict' => 0,
                            'Test::More' => 0,
                            'Exporter::Lite' => 0,
-                           'Scalar::Defer' => '0.12',
+                           'Scalar::Defer' => '0.13',
                            'SUPER' => 0
                          }
         )

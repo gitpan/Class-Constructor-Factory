@@ -18,6 +18,8 @@ Class::Constructor::Factory - Automated constructor generation
 
 =head1 DESCRIPTION
 
+  NOTE: This module is about to be renamed. 
+
 I like the simplicity of L<Class::Accessor> and friends. 
 With them, creating accessors is a piece of cake.
 It does give me a default constructor as well.

@@ -14,6 +14,8 @@ SYNOPSIS
       # the weird name, mk_constructor0, is on purpose while API settles
 
 DESCRIPTION
+      NOTE: This module is about to be renamed. 
+
     I like the simplicity of Class::Accessor and friends. With them,
     creating accessors is a piece of cake. It does give me a default
     constructor as well.

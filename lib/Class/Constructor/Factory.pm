@@ -5,14 +5,14 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Exporter::Lite;
 BEGIN {
-  our @EXPORT = qw( mk_constructor0 defer lazy );
+  our @EXPORT = qw( defer lazy );
 }
 
-use Scalar::Defer 0.12 qw( force defer lazy );
+use Scalar::Defer 0.13 qw( defer lazy );
 # &defer and &lazy are imported just to be exported
 
 sub mk_constructor0 {
@@ -27,11 +27,9 @@ sub mk_constructor0 {
   *{$subname} = $sub;
 }
 
-sub _is_deferred {
-  UNIVERSAL::isa( shift, 'Scalar::Defer::Deferred' );
-  # within Scalar::Defer, it could be implemented as
-  # ref(shift) eq DEFER_PACKAGE
-}
+#sub _is_deferred {
+#  UNIVERSAL::isa( shift, 'Scalar::Defer::Deferred' );
+#}
 
 
 # from Class::Accessor
@@ -58,7 +56,7 @@ sub make_constructor0 {
     my %f = %{ $fields || {} };
     while ( my ($k, $v) = each %$params ) {
       if ( !exists $f{$k} ) {
-        $f{$k} = _is_deferred($v) ? force($v) : $v;
+        $f{$k} = Scalar::Defer::is_deferred($v) ? Scalar::Defer::force($v) : $v;
       }
     }
     return $self->super('new')->( $self, \%f );

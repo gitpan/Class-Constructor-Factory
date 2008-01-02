@@ -9,7 +9,7 @@ Module::Build->new(
     'strict'         => 0,
     'warnings'       => 0,
 
-    'Scalar::Defer'  => 0.12,
+    'Scalar::Defer'  => 0.13,
     'Exporter::Lite' => 0,
     'SUPER'          => 0,
   },

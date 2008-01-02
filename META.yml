@@ -1,6 +1,6 @@
 ---
 name: Class-Constructor-Factory
-version: 0.001
+version: 0.002
 author:
   - 'Adriano R. Ferreira <ferreira@cpan.org>'
 abstract: Automated constructor generation
@@ -10,7 +10,7 @@ resources:
 requires:
   Exporter::Lite: 0
   SUPER: 0
-  Scalar::Defer: 0.12
+  Scalar::Defer: 0.13
   strict: 0
   warnings: 0
 build_requires:
@@ -18,7 +18,7 @@ build_requires:
 provides:
   Class::Constructor::Factory:
     file: lib/Class/Constructor/Factory.pm
-    version: 0.001
+    version: 0.002
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
